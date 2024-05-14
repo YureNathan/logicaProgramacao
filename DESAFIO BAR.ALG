@@ -6,7 +6,7 @@ Algoritmo "DESAFIO BAR"
 // Data atual  : 11/5/2024
 Var
 // Seção de Declarações das variáveis 
-    sexo : caractere
+    sexo, infoCouvert : caractere
     consumo, ingresso, valorTotal: real
     qtdCerveja, qtdRefri, qtdEspeto, couvert : inteiro
 Inicio
