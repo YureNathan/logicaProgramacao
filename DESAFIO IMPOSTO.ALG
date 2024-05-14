@@ -6,8 +6,8 @@ Algoritmo "DESAFIO IMPOSTO"
 // Data atual  : 13/5/2024
 Var
 // Seção de Declarações das variáveis 
-  salarioAnual, PrestacaoServico, ganhoCapital, gastoMedico, gastoEdu : real
-  impostSalario : real
+  salarioAnual, PrestacaoServico, ganhoCapital, gastoMedico, gastoEdu, abatimento : real
+  impostoSalario, impostoDevido, impostSalario, impostCapital, impostServico, impostBruto, maxDedutivel, gastoDedutivel: real
 
 Inicio
 // Seção de Comandos, procedimento, funções, operadores, etc... 
@@ -22,22 +22,45 @@ Inicio
     escreva("Gastos educacionais: ")
     leia(gastoEdu)
 
+         impostoSalario <- salarioAnual / 12
+        se (impostoSalario > 3000)  e (impostoSalario < 5000) entao
+          impostSalario <- (salarioAnual) * 10 /100
+        senao
+           impostSalario <- (salarioAnual) * 20 /100
+        fimse
 
-        se (salarioAnual > 3000)  e (salarioAnual < 5000) entao
-
-          impostSalario <- salarioAnual - 10
-
-
-
-
-
-
-
-
-
+        se PrestacaoServico > 0 entao
+         impostServico <- PrestacaoServico * 15 /100
+         fimse
+              se ganhoCapital > 0 entao
+                impostCapital <- ganhoCapital * 20 /100
+              fimse
+        
+        impostBruto <- impostSalario + impostServico + impostCapital
+        maxDedutivel <- impostBruto * 30 /100
+        gastoDedutivel <- gastoMedico + gastoEdu
+        
+        se  maxDedutivel < gastoDedutivel entao
+        abatimento <- maxDedutivel
+        senao
+          abatimento <- gastoDedutivel
+        fimse
+        impostoDevido <-  impostBruto - abatimento
+        
     escreval("")
     escreval("RELATÓRIO DE IMPOSTO DE RENDA")
     escreval("")
     escreval("CONSOLIDADO DE RENDA:")
-    escreval("Imposto sobre salário: ", salarioAnual /10)
+    escreval("Imposto sobre salário: ", impostSalario:4:2)
+    escreval("Imposto sobre servicos: ", impostServico:4:2)
+    escreval("Imposto sobre ganho de capital: ", impostCapital:4:2)
+    escreval("")
+    escreval("DEDUÇÕES: ")
+    escreval("Máximo dedutível: ", maxDedutivel:4:2)
+    escreval("Gastos dedutíveis: ", gastoDedutivel:4:2)
+    escreval("")
+    escreval("RESUMO: ")
+    escreval("Imposto bruto total: ", impostBruto:4:2)
+    escreval("Abatimento: ", abatimento:4:2)
+    escreval("Imposto devido: ", impostBruto - abatimento:4:2)
 Fimalgoritmo
