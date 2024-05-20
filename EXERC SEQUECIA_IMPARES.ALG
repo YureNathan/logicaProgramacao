@@ -1,20 +1,20 @@
 Algoritmo "EXERC SEQUECIA_IMPARES"
 // 
 //  
-// Descrição   : Aqui você descreve o que o programa faz! (função)
+// Descriï¿½ï¿½o   : Aqui vocï¿½ descreve o que o programa faz! (funï¿½ï¿½o)
 // Autor(a)    : Nome do(a) aluno(a)
 // Data atual  : 17/5/2024
 Var
-// Seção de Declarações das variáveis 
+// Seï¿½ï¿½o de Declaraï¿½ï¿½es das variï¿½veis 
   x, i : inteiro
 
 Inicio
-// Seção de Comandos, procedimento, funções, operadores, etc... 
+// Seï¿½ï¿½o de Comandos, procedimento, funï¿½ï¿½es, operadores, etc... 
    escreva("Digite o valor de X: ")
    leia(x)
    
    para i de 1 ate x faca
-   se i % 2 <> 0 entao
+   se i % 2 ! 0 entao
    escreval(i)
    fimse
    fimpara
