@@ -24,7 +24,7 @@ Inicio
    para i de 1 ate N-1 faca
        se vet[i] > maiorValor entao
             maiorValor <- vet[i]
-            cont <- i
+            cont <- cont + i
        fimse
    fimpara
    escreval("MAIOR VALOR = ", maiorValor:4:2)
