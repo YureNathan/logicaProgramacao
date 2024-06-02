@@ -54,7 +54,7 @@ Inicio
    fimpara
    escreval
    porcentagem <- cont / N * 100
-   escreval("Porcentagem de aprovação: ", porcentagem:4:2, "%")
+   escreval("Porcentagem de aprovação: ", porcentagem:4:2, " %")
    escreval("Maior média: ", nomes[maiorN])
 
    se cont = 0 entao
