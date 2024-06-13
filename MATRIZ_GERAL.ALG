@@ -30,6 +30,7 @@ Inicio
           fimse
   fimpara
   fimpara
+  escreval
   escreval("SOMA DOS POSITIVOS: ", soma:3:1)
   escreval
   escreva("Escolha uma linha: ")
@@ -38,8 +39,9 @@ Inicio
  escreva("LINHA ESCOLHIDA: ")
  escreval
        para j de 0 ate N-1 faca
-      escreva(" ", vet[L,j]:3:1)
+      escreva(vet[L,j]:3:1, " ")
   fimpara
+  escreval
   escreval
 escreva("Escolha uma coluna: ")
   leia(C)
@@ -66,10 +68,10 @@ escreva("Escolha uma coluna: ")
   escreval
    escreva("MATRIZ ALTERADA: ")
   para i de 0 ate N-1 faca
-       escreval
       para j de 0 ate N-1 faca
-          escreva(" ", vet[i,j]:3:1)
+          escreva( vet[i,j]:3:1, " ")
       fimpara
+
   fimpara
   
 Fimalgoritmo
